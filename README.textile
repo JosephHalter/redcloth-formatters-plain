@@ -1,6 +1,10 @@
 h2. RedCloth::Formatters::Plain
 
-Similar to HTML and Latex formatters included in RedCloth, this one allows you to convert Textile to plain text discarding the Textile syntax. This plugin does of course require the RedCloth gem.
+Similar to HTML and Latex formatters included in RedCloth, this one allows you to convert Textile to plain text discarding the Textile syntax.
+
+h3. Dependencies
+
+This plugin does of course require the RedCloth gem.
 
 h3. Example
 
