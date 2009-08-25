@@ -8,8 +8,12 @@ This plugin does of course require the RedCloth gem.
 
 h3. Example
 
+<code>
   RedCloth.new("p. this is *simple* _test_").to_plain
+</code>
 
 will return:
 
+<code>
   "this is simple test"
+</code>
