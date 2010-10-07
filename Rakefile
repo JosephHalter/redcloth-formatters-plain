@@ -34,5 +34,5 @@ task :build do
 end
  
 task :release => :build do
-  system "gem push redcloth-formatters-plain-#{RedCloth::Formatters::Plain::VERSION}"
+  system "gem push red_cloth_formatters_plain-#{RedCloth::Formatters::Plain::VERSION}.gem"
 end
