@@ -18,6 +18,8 @@ will return:
   "this is simple test"
 </code>
 
+h3. Example displaying URLs
+
 <code>
   RedCloth.new(%Q{"Please contact support":http://example.com/support}).to_plain
 </code>
