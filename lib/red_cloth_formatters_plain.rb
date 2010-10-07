@@ -5,6 +5,7 @@ require "RedCloth"
 module RedCloth
   module Formatters
     module Plain
+      VERSION = "0.1"
 
       class Sanitizer
         def self.strip_tags(text)
