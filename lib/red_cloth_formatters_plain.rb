@@ -111,9 +111,12 @@ module RedCloth
         ""
       end
 
-      # render link name only
+      # render link name followed by <url>
+      # uses !LINK_OPEN_TAG! and !LINK_CLOSE_TAG! as a way to identify
+      # the < > otherwise they will be stripped when all html tags are stripped
+      #
       def link(opts)
-        "#{opts[:name]}"
+        "#{opts[:name]} !LINK_OPEN_TAG!#{opts[:href]}!LINK_CLOSE_TAG!"
       end
 
       # render image alternative text or title if not available
@@ -219,7 +222,6 @@ module RedCloth
       end
       def before_transform(text)
       end
-
     end
   end
   class TextileDoc
@@ -227,7 +229,9 @@ module RedCloth
       apply_rules(rules)
       output = to(Formatters::Plain)
       output = Formatters::Plain::Sanitizer.strip_tags(output)
-      output
+      # replace special link hooks with < and >
+      # See #RedCloth::Formatters::Plain#link above
+      output.gsub("!LINK_OPEN_TAG!", "<").gsub("!LINK_CLOSE_TAG!", ">")
     end
   end
 end

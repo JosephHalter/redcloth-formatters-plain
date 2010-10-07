@@ -243,7 +243,7 @@ describe "RedCloth::Formatters::Plain" do
       input += "h4. [\"**Textile** (markup language) - Wikipedia\":http://en.wikipedia.org/wiki/Textile_(markup_language)]\n\n"
       input += "**Textile** is a lightweight markup language originally developed by Dean Allen and billed as a \"humane Web text generator\".  **Textile** converts its marked-up text ..."
       output = "Search results for Textile:\n"
-      output += "Textile (markup language) - Wikipedia\n"
+      output += "Textile (markup language) - Wikipedia <http://en.wikipedia.org/wiki/Textile_(markup_language)>\n"
       output += "Textile is a lightweight markup language originally developed by Dean Allen and billed as a \"humane Web text generator\".  Textile converts its marked-up text ..."
       RedCloth.new(input).to_plain.should == output
     end
@@ -284,23 +284,23 @@ describe "RedCloth::Formatters::Plain" do
     describe "Links" do
       it "followed by a colon" do
         input = "Learn more \"about the company\":/about and our \"board of directors\":../about#board."
-        output = "Learn more about the company and our board of directors."
+        output = "Learn more about the company </about> and our board of directors <../about#board>."
         RedCloth.new(input).to_plain.should == output
       end
       it "with title" do
         input = "Visit our \"parent company (Example Corporation)\":http://example.com."
-        output = "Visit our parent company."
+        output = "Visit our parent company <http://example.com>."
         RedCloth.new(input).to_plain.should == output
       end
       it "surrounded with square brackets" do
         input = "This is a link to a [\"Wikipedia article about Textile\":http://en.wikipedia.org/wiki/Textile_(markup_language)]."
-        output = "This is a link to a Wikipedia article about Textile."
+        output = "This is a link to a Wikipedia article about Textile <http://en.wikipedia.org/wiki/Textile_(markup_language)>."
         RedCloth.new(input).to_plain.should == output
       end
       it "with alias" do
         input = "I'm really excited about \"RedCloth\":redcloth.  I love it so much, I think I'll name my first child \"RedCloth\":redcloth.\n\n"
         input += "[redcloth]http://redcloth.org"
-        output = "I'm really excited about RedCloth.  I love it so much, I think I'll name my first child RedCloth."
+        output = "I'm really excited about RedCloth <http://redcloth.org>.  I love it so much, I think I'll name my first child RedCloth <http://redcloth.org>."
         RedCloth.new(input).to_plain.should == output
       end
     end
