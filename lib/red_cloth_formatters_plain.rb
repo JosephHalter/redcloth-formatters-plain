@@ -1,11 +1,11 @@
 # encoding: UTF-8
+require "red_cloth_formatters_plain/version"
 require "cgi"
 require "RedCloth"
 
 module RedCloth
   module Formatters
     module Plain
-      VERSION = "0.1"
 
       class Sanitizer
         def self.strip_tags(text)
