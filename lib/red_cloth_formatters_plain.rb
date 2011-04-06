@@ -69,7 +69,8 @@ module RedCloth
       end
       def li_open(opts)
         @li_need_closing = true
-        "#{"  " * (opts[:nest]-1)}- #{opts[:text]}"
+        num = opts[:nest] - 1
+        "#{"  " * num}- #{opts[:text]}"
       end
       def li_close(opts=nil)
         # avoid multiple line breaks when closing multiple list items
