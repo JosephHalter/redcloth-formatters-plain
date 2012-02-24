@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = ">= 1.3.6"
  
   s.add_development_dependency "rspec", "~> 1"
-  s.add_dependency "RedCloth", "4.2.3"
+  s.add_dependency "RedCloth", ">= 4.2.3"
 
   s.files        = Dir.glob("{lib}/**/*") + %w(MIT-LICENSE README.textile Rakefile init.rb)
   s.require_paths = ['lib']
