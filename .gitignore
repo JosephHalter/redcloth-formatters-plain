@@ -6,3 +6,4 @@ Thumbs.db
 *.log
 coverage/*
 Gemfile.lock
+.rvmrc
