@@ -1,3 +1,5 @@
+**WARNING:** This project is untested with Ruby 1.9.
+
 h2. RedCloth::Formatters::Plain
 
 Similar to HTML and Latex formatters included in RedCloth, this one allows you to convert Textile to plain text discarding the Textile syntax.

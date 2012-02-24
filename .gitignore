@@ -5,3 +5,5 @@ Thumbs.db
 *.sqlite3.db
 *.log
 coverage/*
+Gemfile.lock
+.rvmrc
