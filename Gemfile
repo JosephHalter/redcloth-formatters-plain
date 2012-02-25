@@ -1,3 +1,2 @@
-source "http://www.rubygems.org"
-gem "rake"
+source "http://rubygems.org"
 gemspec

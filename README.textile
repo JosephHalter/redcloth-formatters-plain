@@ -6,7 +6,7 @@ Similar to HTML and Latex formatters included in RedCloth, this one allows you t
 
 h3. Dependencies
 
-This plugin does of course require the RedCloth gem.
+This plugin does only require the RedCloth gem.
 
 h3. Example
 

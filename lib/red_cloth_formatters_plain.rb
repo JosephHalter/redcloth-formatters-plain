@@ -1,7 +1,5 @@
 # encoding: UTF-8
-require "red_cloth_formatters_plain/version"
 require "cgi"
-require "redcloth"
 
 module RedCloth
   module Formatters
