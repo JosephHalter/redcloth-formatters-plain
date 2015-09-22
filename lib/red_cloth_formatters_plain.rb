@@ -26,7 +26,7 @@ module RedCloth
 
       [:h1, :h2, :h3, :h4, :h5, :h6, :p, :pre, :div].each do |m|
         define_method(m) do |opts|
-          "#{opts[:text]}\n\n"
+          "#{opts[:text]}\n"
         end
       end
 
