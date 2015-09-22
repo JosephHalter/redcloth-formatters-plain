@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = "red_cloth_formatters_plain"
-  s.version     = "0.2.1"
+  s.version     = "0.3.0"
   s.authors     = ["Joseph Halter", "Jeff Zellman"]
   s.email       = ["joseph@openhood.com", "jzellman@gmail.com"]
   s.homepage    = "https://github.com/JosephHalter/redcloth-formatters-plain"
